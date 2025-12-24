@@ -1,9 +1,9 @@
-name: url_image_auto
+name: astrbot_plugin_url_image_auto
 display_name: 链接转图片 (URL Image Auto)
-author: sin
+author: Sin
 version: 0.1.1
-description: 自动将发送消息中的图片链接 (Markdown/CQ码/URL) 转换为 AstrBot 图片组件。支持自定义扩展名和白名单。
-repo: https://github.com/AstrBot-Devs/astrbot_plugin_url_image_auto
+description: 这是一个 AstrBot 插件，用于自动将发送消息中的图片链接转换为 AstrBot 的原生图片组件。
+repo: https://github.com/San-sin-sun/url_image_auto
 tags:
   - image
   - utility

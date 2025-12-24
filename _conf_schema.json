@@ -1,15 +1,22 @@
 {
     "extensions": {
         "type": "list",
-        "description": "Treat URLs ending with these extensions as images.",
-        "default": [".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp"],
+        "description": "遇到以这些扩展名结尾的 URL 时，将其视为图片。",
+        "default": [
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".gif",
+            ".webp",
+            ".bmp"
+        ],
         "items": {
             "type": "string"
         }
     },
     "whitelist_rules": {
         "type": "list",
-        "description": "Always treat URLs matching these host/path rules as images (even without extension).",
+        "description": "总是将匹配这些域名/路径规则的 URL 视为图片（即使没有扩展名）。",
         "default": [
             {
                 "host": "krcpsqplffnigtjeshns.supabase.co",
@@ -18,15 +25,15 @@
         ],
         "items": {
             "type": "object",
-            "description": "Rule",
+            "description": "规则",
             "items": {
                 "host": {
                     "type": "string",
-                    "description": "Domain name (e.g. example.com)"
+                    "description": "域名 (例如 example.com)"
                 },
                 "path_chars": {
                     "type": "string",
-                    "description": "Path must start with this string. Leave empty to match all paths on this host.",
+                    "description": "路径必须以该字符串开头。留空则匹配该域名下的所有路径。",
                     "default": ""
                 }
             }
@@ -34,17 +41,17 @@
     },
     "convert_markdown": {
         "type": "bool",
-        "description": "Convert Markdown image syntax ![alt](url) to image components.",
+        "description": "将 Markdown 图片语法 ![alt](url) 转换为图片组件。",
         "default": true
     },
     "convert_cq_code": {
         "type": "bool",
-        "description": "Convert CQ:image codes to image components.",
+        "description": "将 CQ:image 码转换为图片组件。",
         "default": true
     },
     "randomize_seed": {
         "type": "bool",
-        "description": "Automatically randomize 'seed' query parameter to prevent caching of random image APIs.",
+        "description": "自动随机化 'seed' 查询参数，以防止随机图 API 被缓存。",
         "default": true
     }
 }

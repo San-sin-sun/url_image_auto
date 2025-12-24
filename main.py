@@ -21,7 +21,7 @@ CQ_IMG_RE = re.compile(r"\[CQ:image,[^\]]*?file=([^,\]]+)\]")
 URL_RE = re.compile(r"(https?://[^\s<>\]\)]+)")
 
 
-@register("url_image_auto", "sin", "Auto convert image URLs to image segments", "0.1.1")
+@register("astrbot_plugin_url_image_auto", "Sin", "这是一个 AstrBot 插件，用于自动将发送消息中的图片链接转换为 AstrBot 的原生图片组件。", "0.1.1")
 class UrlImageAuto(Star):
     def __init__(self, context: Context):
         super().__init__(context)
