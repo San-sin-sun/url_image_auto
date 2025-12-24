@@ -1,0 +1,50 @@
+{
+    "extensions": {
+        "type": "list",
+        "description": "Treat URLs ending with these extensions as images.",
+        "default": [".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp"],
+        "items": {
+            "type": "string"
+        }
+    },
+    "whitelist_rules": {
+        "type": "list",
+        "description": "Always treat URLs matching these host/path rules as images (even without extension).",
+        "default": [
+            {
+                "host": "krcpsqplffnigtjeshns.supabase.co",
+                "path_chars": "/functions/v1/random/biaoqing"
+            }
+        ],
+        "items": {
+            "type": "object",
+            "description": "Rule",
+            "items": {
+                "host": {
+                    "type": "string",
+                    "description": "Domain name (e.g. example.com)"
+                },
+                "path_chars": {
+                    "type": "string",
+                    "description": "Path must start with this string. Leave empty to match all paths on this host.",
+                    "default": ""
+                }
+            }
+        }
+    },
+    "convert_markdown": {
+        "type": "bool",
+        "description": "Convert Markdown image syntax ![alt](url) to image components.",
+        "default": true
+    },
+    "convert_cq_code": {
+        "type": "bool",
+        "description": "Convert CQ:image codes to image components.",
+        "default": true
+    },
+    "randomize_seed": {
+        "type": "bool",
+        "description": "Automatically randomize 'seed' query parameter to prevent caching of random image APIs.",
+        "default": true
+    }
+}
